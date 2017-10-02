@@ -1,0 +1,12 @@
+.icon-txt-two-cols {
+  display: flex;
+  flex-wrap: wrap;
+  &__col {
+    @include flex-grid-column(6);
+    padding-right: rem-calc(15);
+  }
+  &__title{
+    font-size: rem-calc(18);
+    line-height: rem-calc(24);
+  }
+}

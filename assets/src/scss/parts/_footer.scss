@@ -1,0 +1,106 @@
+.footer {
+  .row {
+    //padding: 70px 0 70px;
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row();
+    align-items: baseline;
+    &__left {
+      @include flex-grid-column(6);
+      @include breakpoint (xs) {
+        @include flex-grid-column(12);
+      }
+
+    }
+    &__right {
+      @include flex-grid-column(6);
+      @include breakpoint (xs) {
+        @include flex-grid-column(12);
+      }
+      padding: 70px 0 70px;
+      &-description {
+        @include breakpoint(xs) {
+          font-size: 12px;
+        }
+        @include breakpoint (tb) {
+          font-size: 14px;
+        }
+        font-family: $main-font-family;
+        font-size: 16px;
+        text-align: right;
+        line-height: 24px;
+        margin-bottom: 25px;
+      }
+      &-social {
+        justify-content: flex-end;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        .social-item {
+          position: relative;
+          text-align: center;
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          margin-right: 12px;
+          transition: all .3s ease;
+        }
+        .social-item:last-child {
+          margin-right: 0;
+        }
+        .social-item:nth-child(1) {
+          background-color: #395999;
+          border: 1px solid #395999;
+          &:hover {
+            background-color: #00FF00;
+            box-shadow: inset 0 0 1em red, 0 0 1em #7FFF00;
+          }
+        }
+        .social-item:nth-child(2) {
+          background-color: #21a7d2;
+          border: 1px solid #21a7d2;
+          &:hover {
+            background-color: #000080;
+            box-shadow: inset 0 0 1em red, 0 0 1em #7FFF00;
+          }
+        }
+        .social-item:nth-child(3) {
+          background-color: #0577a9;
+          border: 1px solid #0577a9;
+          &:hover {
+            background-color: #800080;
+            box-shadow: inset 0 0 1em red, 0 0 1em #7FFF00;
+          }
+        }
+        .social-item:nth-child(4) {
+          background-color: #3d739c;
+          border: 1px solid #3d739c;
+          &:hover {
+            background-color: #808000;
+            box-shadow: inset 0 0 1em red, 0 0 1em #7FFF00;
+          }
+        }
+        .social-item:nth-child(5) {
+          background-color: #87caf0;
+          border: 1px solid #87caf0;
+          &:hover {
+            background-color: #2F4F4F;
+            box-shadow: inset 0 0 1em red, 0 0 1em #7FFF00;
+          }
+        }
+        .social-link {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          line-height: 12px;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}
+
+

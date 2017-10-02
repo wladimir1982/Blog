@@ -1,0 +1,100 @@
+.stay {
+  background: #7beec7;
+  .row {
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row();
+    //justify-content: space-around;
+    //background: yellow;
+    padding: 50px 0 50px;
+  }
+  &__info {
+    padding: 15px;
+    @include flex-grid-column(6);
+    @include breakpoint (xs) {
+      @include flex-grid-column(12);
+      margin-bottom: 15px;
+    }
+
+    &-title {
+      color: #ffffff;
+      font-family: $title-font-family;
+      font-size: 31px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0 0 25px;
+    }
+    &-btn {
+      width: 165px;
+      height: 49px;
+      background-color: #ffffff;
+      color: #7beec7;
+      font-family: $title-font-family;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: all .3s;
+    }
+    &-btn:hover {
+      background-color: #9d9d9d;
+    }
+  }
+  &__send {
+    @include flex-grid-column(6);
+    @include breakpoint (xs) {
+      @include flex-grid-column(12);
+    }
+    background: #FFFFFF;
+    padding: 15px;
+    &-title {
+      color: #60606e;
+      font-family: $title-font-family;
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0 0 20px;
+      text-transform: uppercase;
+    }
+    &-subtitle {
+      color: #999999;
+      font-family: $main-font-family;
+      font-size: 15px;
+      margin-bottom: 15px;
+      line-height: 24px;
+    }
+    &-form {
+      .control {
+        @include breakpoint(xs){
+          margin-bottom: 5px;
+        }
+        height: 49px;
+        padding: 6px 12px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        background-color: #fefcf9;
+        color: #cccccc;
+        font-family: $title-font-family;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 48px;
+        text-transform: uppercase;
+      }
+      .btn {
+        width: 135px;
+        height: 50px;
+        background-color: #7beec7;
+        color: #ffffff;
+        border-radius: 5px;
+        font-family: $title-font-family;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 48px;
+        text-transform: uppercase;
+        transition: all .3s;
+      }
+      .btn:hover {
+        background-color: #9d9d9d;
+      }
+    }
+  }
+}

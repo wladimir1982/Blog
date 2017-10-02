@@ -1,0 +1,114 @@
+.blog-page {
+  padding-top: rem-calc(150);
+  //padding-bottom: rem-calc(52);
+  &__row {
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row();
+    justify-content: space-between;
+  }
+  &__article {
+    .article {
+      &__header {
+        > a {
+          .article__header-image {
+            margin-bottom: 30px;
+          }
+        }
+        .meta {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+          margin-bottom: 20px;
+          &__comments {
+            text-decoration: none;
+          }
+          &__time {
+            color: #ffffff;
+            background-color: #7beec7;
+            padding: 9px 19px;
+            margin-right: 14px;
+            font-family: $title-font-family;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+        }
+        .fa-commenting-o {
+          @include breakpoint(xs) {
+            margin-right: 6px;
+          }
+          color: #cccccc;
+          font-size: 18px;
+          margin-right: 9px;
+          &__counter {
+            @include breakpoint(xs) {
+              margin-right: 15px;
+            }
+            color: #cccccc;
+            font-family: $title-font-family;
+            font-size: 14px;
+            margin-right: 20px;
+          }
+        }
+        .fa-heart {
+          color: #eb6a6a;
+          font-size: 18px;
+          margin-right: 5px;
+          &__counter {
+            color: #cccccc;
+            font-family: $title-font-family;
+            font-size: 14px;
+            margin-right: 0;
+          }
+        }
+        &-title {
+          color: #60606e;
+          font-family: $title-font-family;
+          font-size: 18px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+      &__main {
+        &-text {
+          color: #999999;
+          font-family: $main-font-family;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+      &__footer {
+        &-read {
+          text-decoration: none;
+        }
+        &-text {
+          color: #60606e;
+          font-family: $title-font-family;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 24px;
+          text-transform: uppercase;
+        }
+        .fa-arrow-right {
+          color: #60606e;
+          font-size: 14px;
+        }
+      }
+    }
+    margin-bottom: rem-calc(100);
+  }
+  &__content {
+    @include flex-grid-column(8);
+    @include breakpoint (xs) {
+      @include flex-grid-column(12);
+    }
+  }
+  &__sidebar {
+    @include flex-grid-column(3);
+    @include breakpoint (xs) {
+      @include flex-grid-column(12);
+    }
+  }
+}

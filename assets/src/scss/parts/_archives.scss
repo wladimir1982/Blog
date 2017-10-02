@@ -1,0 +1,40 @@
+.archives {
+  &__title {
+    color: #60606e;
+    font-family: $title-font-family;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .list {
+    padding-left: 15px;
+    &__item {
+      color: #60606e;
+      font-family: $main-font-family;
+      font-size: 14px;
+      list-style: none;
+      > hr {
+        border: 1px solid grey;
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 0 10px;
+        &-link {
+          text-decoration: none;
+        }
+        &-link:hover {
+          color: #7beec7;
+        }
+        &-counter {
+          color: #60606e;
+          font-size: 14px;
+          text-align: right;
+        }
+      }
+    }
+  }
+}

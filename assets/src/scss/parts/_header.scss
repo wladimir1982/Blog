@@ -1,0 +1,103 @@
+.header {
+  height: 100vh;
+  padding-top: rem-calc(43);
+  background-color: $color_2;
+  @include bg-img('img/layer-4.png');
+  &__row {
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row();
+  }
+  &__logo-wrap {
+    @include flex-grid-column(6);
+  }
+  &__logo {
+    color: #60606e;
+    font-family: $title-font-family;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    display: inline-block;
+    text-decoration: none;
+    @include breakpoint(xs) {
+      &--transform {
+        transform: translateX(-43%) rotate(-90deg);
+      }
+    }
+  }
+  &__logo:hover {
+    color: #7beec7;
+  }
+  &__container {
+    min-height: 500px;
+  }
+  &__menu-icon {
+    @include flex-grid-column(6);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  &__menu {
+    @include breakpoint(xs) {
+      width: 250px;
+      height: auto;
+      align-items: flex-start;
+    }
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: auto;
+    background-color: lightblue;
+    transform: translateX(300px);
+    transition: all 0.3s;
+    @include breakpoint(xs) {
+      width: 250px;
+      transform: translateX(250px);
+    }
+    &--show {
+      transform: translateX(0);
+    }
+    a {
+      @include breakpoint(xs) {
+        padding: 0.7rem 4rem;
+      }
+      background-color: transparent;
+    }
+  }
+  &__navigation {
+    padding-top: 42px;
+  }
+  &__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    color: #60606e;
+    font-family: $title-font-family;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    text-align: center;
+
+    font-family: $title-font-family;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+    &-link {
+      text-decoration: none;
+      color: #60606e;
+      transition: all .3s;
+    }
+    &-link:hover {
+      text-decoration: none;
+      color: #7beec7;
+    }
+  }
+}

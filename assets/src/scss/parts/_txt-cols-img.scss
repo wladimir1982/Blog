@@ -1,0 +1,35 @@
+.txt-cols-img {
+  padding-top: rem-calc(148);
+  padding-bottom: rem-calc(148);
+  &__row {
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row();
+    &--center {
+      justify-content: center;
+    }
+  }
+  &__text-wrap {
+    @include flex-grid-column(7);
+    @include breakpoint (xs) {
+      @include flex-grid-column(12);
+    }
+  }
+  &__image-wrap {
+    @include flex-grid-column(5);
+    @include breakpoint (xs) {
+      @include flex-grid-column(12);
+      text-align: center;
+    }
+  }
+  &__image {
+    //transform: translate3d(0, 100%, 0);
+    opacity: 0;
+    transition: opacity .3s ease;
+    &--animated {
+      animation-name: slideInUp;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      opacity: 1;
+    }
+  }
+}
