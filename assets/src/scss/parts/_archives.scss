@@ -1,6 +1,5 @@
 .archives {
   &__title {
-    color: #60606e;
     font-family: $title-font-family;
     font-size: 14px;
     font-weight: 700;
@@ -24,6 +23,7 @@
         justify-content: space-between;
         padding: 0 10px;
         &-link {
+          color: #60606e;
           text-decoration: none;
         }
         &-link:hover {

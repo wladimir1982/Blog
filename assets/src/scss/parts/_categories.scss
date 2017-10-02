@@ -11,7 +11,6 @@
   .list {
     padding-left: 15px;
     &__item {
-      color: #60606e;
       font-family: $main-font-family;
       font-size: 14px;
       list-style: none;
@@ -25,6 +24,7 @@
         justify-content: space-between;
         padding: 0 10px;
         &-link {
+          color: #60606e;
           text-decoration: none;
         }
         &-link:hover {
